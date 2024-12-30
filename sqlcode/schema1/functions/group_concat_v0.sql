@@ -1,0 +1,1 @@
+DROP AGGREGATE dvdrental.group_concat(text);

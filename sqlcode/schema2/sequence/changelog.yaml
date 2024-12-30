@@ -1,0 +1,39 @@
+databaseChangeLog:
+
+# - changeSet:
+#     id: customer_customer_id_seq
+#     author: workshop-user
+#     changes:
+#     - sqlFile:
+#         path: customer_customer_id_seq.sql
+#         relativeToChangelogFile: true
+#     - rollback:
+#         - sqlFile:
+#             path: customer_customer_id_seq-rollback.sql
+#             relativeToChangelogFile: true
+
+# - changeSet:
+#     id: actor_actor_id_seq
+#     author: workshop-user
+#     changes:
+#     - sqlFile:
+#         path: actor_actor_id_seq.sql
+#         relativeToChangelogFile: true
+#     - rollback:
+#         - sqlFile:
+#             path: actor_actor_id_seq-rollback.sql
+#             relativeToChangelogFile: true
+
+# - changeSet:
+#     id: category_category_id_seq
+#     author: workshop-user
+#     changes:
+#     - sqlFile:
+#         path: category_category_id_seq.sql
+#         relativeToChangelogFile: true
+#     - rollback:
+#         - sqlFile:
+#             path: category_category_id_seq-rollback.sql
+#             relativeToChangelogFile: true
+
+

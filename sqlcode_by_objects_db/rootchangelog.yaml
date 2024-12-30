@@ -1,0 +1,12 @@
+databaseChangeLog:
+
+- include:
+    file: database1/database1changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: database2/database2changelog.yaml
+    relativeToChangelogFile: true
+- include:
+    file: database3/database3changelog.yaml
+    relativeToChangelogFile: true
+

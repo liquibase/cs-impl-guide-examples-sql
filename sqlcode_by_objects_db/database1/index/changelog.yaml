@@ -1,0 +1,38 @@
+databaseChangeLog:
+
+# - changeSet:
+#     id: index1
+#     author: nvoxland
+#     changes:
+#     - sqlFile:
+#         path: index1.sql
+#         relativeToChangelogFile: true
+#     - rollback:
+#         - sqlFile:
+#             path: index1-rollback.sql
+#             relativeToChangelogFile: true
+
+# - changeSet:
+#     id: index2
+#     author: nvoxland
+#     changes:
+#     - sqlFile:
+#         path: index2.sql
+#         relativeToChangelogFile: true
+#     - rollback:
+#         - sqlFile:
+#             path: index2-rollback.sql
+#             relativeToChangelogFile: true
+
+# - changeSet:
+#     id: index3
+#     author: nvoxland
+#     changes:
+#     - sqlFile:
+#         path: index3.sql
+#         relativeToChangelogFile: true
+#     - rollback:
+#         - sqlFile:
+#             path: index3-rollback.sql
+#             relativeToChangelogFile: true
+

@@ -1,0 +1,5 @@
+# CODEOWNERS file to define individuals or teams that are responsible for code in a repository.
+# To restrict users from modifying the pipeline definitions, update this file with specific owners.
+
+/.azure_pipelines/      @adeelmalik78 @daticalamy @don-liquibase @dreads @recampbell
+/.github/               @adeelmalik78 @daticalamy @don-liquibase @dreads @recampbell

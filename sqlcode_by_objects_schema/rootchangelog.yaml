@@ -1,0 +1,13 @@
+databaseChangeLog:
+
+- include:
+    file: schema1/schema1changelog.yaml
+    relativeToChangelogFile: true
+    
+#- include:
+#    file: schema2/schema2changelog.yaml
+#    relativeToChangelogFile: true
+#- include:
+#    file: schema3/schema3changelog.yaml
+#    relativeToChangelogFile: true
+#

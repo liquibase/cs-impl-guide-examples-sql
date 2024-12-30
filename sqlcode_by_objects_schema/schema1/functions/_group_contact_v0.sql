@@ -1,0 +1,1 @@
+DROP FUNCTION "dvdrental"._group_concat;
