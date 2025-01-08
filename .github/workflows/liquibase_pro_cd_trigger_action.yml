@@ -1,0 +1,39 @@
+#####################################################################
+#  Trigger the continuous deployment (CD) of database
+#  changes using Liquibase Pro, Liquibase Pro Flows, and Custom
+#  Policy checks on another repository.
+#####################################################################
+name: 'Trigger the Liquibase Pro CD Workflow'
+run-name: Continuous Deployment of ${{github.ref}} by ${{ github.actor }}
+
+# This workflow will execute whenever a 'push' event occurs on the
+# 'develop' branch. A push event can occur due to several events,
+# including merging a PR or bypassing rules and pushing directly to
+# the branch as a repository administrator. When this workflow
+# executes, it will deploy all pending changes, including any which
+# have been previously rolled back. Since the GitHub Actions and
+# Azure Pipelines files are housed in the same repository, we safely
+# ignore any changes to the Azure workflows.
+#
+# To extend CD to other environments, add their corresponding
+# branches here.
+on:
+  push:
+    branches:
+      - 'develop'
+    paths-ignore:
+      - '.azure_pipelines/**'
+
+jobs:
+  trigger-event:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fire event
+        run: |
+          curl -L \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GHA_TRIGGER_PAT }}" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            https://api.github.com/repos/liquibase/cs-impl-guide-examples/actions/workflows/azure_liquibase_pro_cd_action.yml/dispatches \
+            -d '{"event_type":"dispatch-event"}'
