@@ -1,16 +1,16 @@
 databaseChangeLog:
 
-# - changeSet:
-#     id: script1
-#     author: nvoxland
-#     changes:
-#     - sqlFile:
-#         path: script1.sql
-#         relativeToChangelogFile: true
-#     - rollback:
-#         - sqlFile:
-#             path: script1-rollback.sql
-#             relativeToChangelogFile: true
+  - changeSet:
+      id: actor
+      author: workshop-user
+      changes:
+        - sqlFile:
+            path: actor.sql
+            relativeToChangelogFile: true
+        - rollback:
+            - sqlFile:
+                path: actor-rollback.sql
+                relativeToChangelogFile: true
 
 # - changeSet:
 #     id: script2

@@ -25,14 +25,14 @@ databaseChangeLog:
 #             relativeToChangelogFile: true
 
 # - changeSet:
-#     id: script2
+#     id: script3
 #     author: nvoxland
 #     changes:
 #     - sqlFile:
-#         path: script2.sql
+#         path: script3.sql
 #         relativeToChangelogFile: true
 #     - rollback:
 #         - sqlFile:
-#             path: script2-rollback.sql
+#             path: script3-rollback.sql
 #             relativeToChangelogFile: true
 
